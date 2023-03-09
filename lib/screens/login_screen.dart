@@ -70,23 +70,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     const SizedBox(
                       height: 80,
                     ),
-                    SizedBox(
-                      width: double.infinity,
-                      child: FilledButton(
-                        onPressed: () {},
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
-                            Icon(Icons.login),
-                            SizedBox(width: 15),
-                            Text("Ingresa con Google"),
-                          ],
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 30,
-                    ),
+
                     InputBoxes(
                       label: "Ingresa tu correo electronico:",
                       placeholder: "alguien@example.com",
