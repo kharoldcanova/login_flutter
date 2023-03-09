@@ -1,5 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:login_flutter/screens/login_screen.dart';
+import 'package:login_flutter/theme/themes.dart';
 
 import 'firebase_options.dart';
 
@@ -17,11 +19,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        useMaterial3: true,
-        primarySwatch: Colors.blue,
-      ),
+      theme: customTheme,
       home: const Home(),
     );
   }
@@ -54,7 +54,7 @@ class Home extends StatelessWidget {
                 ),
                 Expanded(
                   child: Text(
-                    "Convierte a tus clientes en fanaticos de tu marca con esta solucion CRM personalizada.",
+                    "Sean bienvenidos a este login personalizado creado en Flutter",
                     style: Theme.of(context).textTheme.bodyLarge,
                     softWrap: true,
                     maxLines: 3,
@@ -73,7 +73,10 @@ class Home extends StatelessWidget {
                   child: const Text("Saltar"),
                 ),
                 FilledButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (_) => LoginScreen.init()));
+                  },
                   child: const Text("Siguiente"),
                 )
               ],
