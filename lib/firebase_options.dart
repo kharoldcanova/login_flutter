@@ -23,9 +23,15 @@ class DefaultFirebaseOptions {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        return ios;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for ios - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -59,25 +65,5 @@ class DefaultFirebaseOptions {
     messagingSenderId: '133015062876',
     projectId: 'login-flutter-f28f8',
     storageBucket: 'login-flutter-f28f8.appspot.com',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCFzUXz7LivSYRm5jyYTfDxnBDmg2-VHDM',
-    appId: '1:133015062876:ios:7bb54156f7889509939999',
-    messagingSenderId: '133015062876',
-    projectId: 'login-flutter-f28f8',
-    storageBucket: 'login-flutter-f28f8.appspot.com',
-    iosClientId: '133015062876-oogmfelg8jv2d6ja5u0u6skmj247190i.apps.googleusercontent.com',
-    iosBundleId: 'com.example.loginFlutter',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCFzUXz7LivSYRm5jyYTfDxnBDmg2-VHDM',
-    appId: '1:133015062876:ios:7bb54156f7889509939999',
-    messagingSenderId: '133015062876',
-    projectId: 'login-flutter-f28f8',
-    storageBucket: 'login-flutter-f28f8.appspot.com',
-    iosClientId: '133015062876-oogmfelg8jv2d6ja5u0u6skmj247190i.apps.googleusercontent.com',
-    iosBundleId: 'com.example.loginFlutter',
   );
 }

@@ -29,6 +29,13 @@
             {
               "client_id": "133015062876-7ei1aheo0juna29k0cha0r0d0gv2tgik.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "133015062876-oogmfelg8jv2d6ja5u0u6skmj247190i.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.loginFlutter"
+              }
             }
           ]
         }

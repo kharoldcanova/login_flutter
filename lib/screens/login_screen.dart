@@ -115,6 +115,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               showSnackBar(
                                   "Usuario autenticado con exito", false);
                             } catch (e) {
+                              print(e);
                               showSnackBar(
                                   "Problemas para iniciar sesion. Intente nuevamente",
                                   true);
